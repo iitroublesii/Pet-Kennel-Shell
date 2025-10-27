@@ -20,8 +20,18 @@ const pet = {
   status: function () {
     console.log(`Pet Name: ${this.name}, Species: ${this.species}, Happiness: ${this.happiness}`);
   },
+
+rename: function (newName) {
+    this.name = newName;
+    console.log(`Your pet has been renamed to ${this.name}!`);
+  },
 };
 
-pet.play()
-pet.feed()
-pet.status()
+pet.status();             
+console.log(pet.play());  
+pet.status();     
+console.log(pet.feed());
+pet.status();  
+
+pet.rename("Bella");
+pet.status();        
